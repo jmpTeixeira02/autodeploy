@@ -1,0 +1,2 @@
+docker build -t autodeploy .
+docker run --rm -it autodeploy bash
