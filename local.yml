@@ -10,33 +10,33 @@
         - core
   tasks:
     - name: ZSH Setup Tasks
-      ansible.builtin.include_tasks:
+      ansible.builtin.import_tasks:
         file: tasks/zsh.yml
         apply:
           tags:
             - core
             - zsh
     - name: Core Libraries
-      ansible.builtin.include_tasks:
+      ansible.builtin.import_tasks:
         file: tasks/core.yml
         apply:
           tags:
             - core
     - name: NVIM Setup Tasls
-      ansible.builtin.include_tasks:
+      ansible.builtin.import_tasks:
         file: tasks/nvim.yml
         apply:
           tags:
             - core
             - nvim
     - name: DotFiles Setup Tasks
-      ansible.builtin.include_tasks:
+      ansible.builtin.import_tasks:
         file: tasks/dotfiles.yml
         apply:
           tags:
             - core
     - name: TMUX Setup Tasks
-      ansible.builtin.include_tasks:
+      ansible.builtin.import_tasks:
         file: tasks/tmux.yml
         apply:
           tags:
