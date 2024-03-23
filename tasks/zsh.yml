@@ -1,0 +1,14 @@
+- name: Install ZSH
+  apt: name=zsh
+- name: Change Shell to ZSH 
+  shell: chsh -s $(which zsh) 
+- name: Install ohmyzsh 
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh 
+- name: Install ZSH Autosugest
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+- name: Install ZSH Highlights
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+    dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting' 

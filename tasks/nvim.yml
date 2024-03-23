@@ -1,0 +1,8 @@
+- name: Download NVIM Binaries
+  ansible.builtin.uri:
+    url: https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+    dest: "./nvim-linux64.tar.gz"
+- name: Remove installed NVIM
+  shell: rm -rf /opt/nvim
+- name: Install NVIM
+  shell: tar -C /opt -xzf nvim-linux64.tar.gz
