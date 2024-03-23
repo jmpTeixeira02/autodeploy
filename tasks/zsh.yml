@@ -1,9 +1,14 @@
 - name: Install ZSH
   apt: name=zsh
-- name: Change Shell to ZSH 
-  shell: chsh -s $(which zsh) 
-- name: Install ohmyzsh 
-  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh 
+- name: Change Shell to ZSH
+  shell: chsh -s $(which zsh)
+- name: Check that the oh-my-zsh exists
+  stat:
+    path: ~/.oh-my-zsh
+  register: oh_my_stats
+- name: Install ohmyzsh
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  when: oh_my_stats.stat.exists == False
 - name: Install ZSH Autosugest
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
@@ -11,13 +16,13 @@
 - name: Install ZSH Highlights
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
-    dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting' 
+    dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting'
 - name: Download ZSH Starship Theme
   ansible.builtin.get_url:
     url: https://starship.rs/install.sh
     dest: /tmp/starship_install.sh
     mode: '0755'
-- name: Install ZSH Starhship Theme 
+- name: Install ZSH Starhship Theme
   become: true
   ansible.builtin.shell:
     cmd: /tmp/starship_install.sh --yes
