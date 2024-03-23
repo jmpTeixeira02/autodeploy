@@ -8,24 +8,29 @@
         state: present
   tasks:
     - name: ZSH Setup Tasks
+      become: true
       ansible.builtin.import_tasks:
         file: tasks/zsh.yml
       tags:
         - zsh
     - name: Core Libraries
+      become: true
       ansible.builtin.import_tasks:
         file: tasks/core.yml
     - name: NVIM Setup Tasls
+      become: true
       ansible.builtin.import_tasks:
         file: tasks/nvim.yml
       tags:
         - nvim
     - name: DotFiles Setup Tasks
+      become: true
       ansible.builtin.import_tasks:
         file: tasks/dotfiles.yml
       tags:
         - dotfiles
     - name: TMUX Setup Tasks
+      become: true
       ansible.builtin.import_tasks:
         file: tasks/tmux.yml
       tags:
