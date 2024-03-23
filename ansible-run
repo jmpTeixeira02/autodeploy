@@ -6,4 +6,4 @@ sudo apt-get update -y
 sudo apt-get install -y curl git software-properties-common ansible
 
 ## Pull Ansible Config 
-sudo ansible-pull -U https://github.com/jmpTeixeira02/local.yml
+sudo ansible-pull -U https://github.com/jmpTeixeira02/autodeploy
