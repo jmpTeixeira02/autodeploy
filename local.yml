@@ -29,3 +29,16 @@
           tags:
             - core
             - nvim
+    - name: TMUX Setup Tasks
+      ansible.builtin.include_tasks:
+        file: tasks/tmux.yml
+        apply:
+          tags:
+            - core
+            - tmux 
+    - name: DotFiles Setup Tasks
+      ansible.builtin.include_tasks:
+        file: tasks/dotfiles.yml
+        apply:
+          tags:
+            - core

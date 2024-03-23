@@ -1,0 +1,6 @@
+- name: Install TMUX
+  apt: name=tmux
+- name: Install TMUX Package Manager
+  ansible.builtin.git:
+    repo: 'https://github.com/tmux-plugins/tpm'
+    dest: "$HOME/.config/tmux/plugins/tpm"
