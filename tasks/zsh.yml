@@ -3,7 +3,7 @@
   become: true
 - name: Change Shell to ZSH
   expect:
-    command: chsh -s $(which zsh)
+    command: chsh -s /usr/bin/zsh
     responses:
       "Password:": "{{password}}"
   become: false
