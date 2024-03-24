@@ -14,7 +14,7 @@
     - name: Ansible Deps
       ansible.builtin.import_tasks:
         file: tasks/deps.yml
-    - name: ZSH Setup Tasks
+    - name: ZSH Setup
       ansible.builtin.import_tasks:
         file: tasks/zsh.yml
       tags:
@@ -24,17 +24,22 @@
         file: tasks/core.yml
       tags:
         - core
-    - name: NVIM Setup Tasls
+    - name: NVIM Setup
       ansible.builtin.import_tasks:
         file: tasks/nvim.yml
       tags:
         - nvim
+    - name: Programming Languages
+      ansible.builtin.import_tasks:
+        file: tasks/languages.yml
+      tags:
+        - lang 
     - name: DotFiles Setup Tasks
       ansible.builtin.import_tasks:
         file: tasks/dotfiles.yml
       tags:
         - dotfiles
-    - name: TMUX Setup Tasks
+    - name: TMUX
       ansible.builtin.import_tasks:
         file: tasks/tmux.yml
       tags:
