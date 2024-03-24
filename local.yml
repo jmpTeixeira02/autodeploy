@@ -22,6 +22,8 @@
     - name: Core Libraries
       ansible.builtin.import_tasks:
         file: tasks/core.yml
+      tags:
+        - core
     - name: NVIM Setup Tasls
       ansible.builtin.import_tasks:
         file: tasks/nvim.yml
