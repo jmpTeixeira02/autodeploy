@@ -24,6 +24,7 @@
         file: tasks/core.yml
       tags:
         - core
+      become: true
     - name: NVIM Setup
       ansible.builtin.import_tasks:
         file: tasks/nvim.yml
