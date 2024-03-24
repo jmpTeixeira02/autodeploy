@@ -27,6 +27,7 @@
     url: https://starship.rs/install.sh
     dest: /tmp/starship_install.sh
     mode: '0755'
+  become: true
 - name: Install ZSH Starhship Theme
   become: true
   ansible.builtin.shell:
