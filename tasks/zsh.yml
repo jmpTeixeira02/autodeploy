@@ -2,8 +2,11 @@
   apt: name=zsh
   become: true
 - name: Change Shell to ZSH
-  shell: chsh -s $(which zsh)
-  become: true
+  expect:
+    command: chsh -s $(which zsh)
+    responses:
+      "Password:": "{{password}}"
+  become: false
 - name: Check that the oh-my-zsh exists
   stat:
     path: ~/.oh-my-zsh
