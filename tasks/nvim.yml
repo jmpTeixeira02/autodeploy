@@ -1,7 +1,12 @@
+- name: Check if NVIM Binaries are already downloaded
+  stat:
+    path: "/tmp/nvim-linux64.tar.gz"
+  register: nvim_stats
 - name: Download NVIM Binaries
   ansible.builtin.uri:
     url: https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
     dest: "/tmp/nvim-linux64.tar.gz"
+  when: nvim_stats.stat.exists == False
 - name: Remove installed NVIM
   shell: rm -rf /opt/nvim
 - name: Install NVIM
