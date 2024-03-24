@@ -1,4 +1,6 @@
 - name: Install GCC 
   apt: name=gcc
+  become: true
 - name: Install GH 
   apt: name=gh
+  become: true
