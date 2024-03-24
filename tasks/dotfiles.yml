@@ -8,4 +8,5 @@
     update: yes
     version: master
 - name: Stow dotfiles
-  shell: cd ~/.dotfiles && stow --adopt . && git reset --hard 
+  shell: cd $HOME/.dotfiles && stow --adopt . && git reset --hard 
+  become: true
