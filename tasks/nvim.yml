@@ -11,3 +11,4 @@
   shell: rm -rf /opt/nvim
 - name: Install NVIM
   shell: tar -C /opt -xzf /tmp/nvim-linux64.tar.gz
+  become: true

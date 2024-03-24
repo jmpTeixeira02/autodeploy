@@ -1,2 +1,4 @@
 - name: Install GCC 
   apt: name=gcc
+- name: Install GH 
+  apt: name=gh

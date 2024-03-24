@@ -9,4 +9,3 @@
     version: master
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && stow --adopt . && git reset --hard 
-  become: true

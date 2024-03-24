@@ -1,11 +1,12 @@
 - hosts: localhost
-  become: true
+  become: no 
   pre_tasks:
     - name: Update Apt
       apt:
         force_apt_get: true
         update_cache: true
         state: present
+      become: true
   tasks:
     - name: ZSH Setup Tasks
       ansible.builtin.import_tasks:
