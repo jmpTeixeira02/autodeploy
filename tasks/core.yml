@@ -8,3 +8,9 @@
     curl -Lo /tmp/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
     tar xf /tmp/lazygit.tar.gz /tmp/lazygit
     sudo install /tmp/lazygit /usr/local/bin
+- name: Install Ripgrep
+  apt: name= ripgrep
+- name: Install fd 
+  apt: name=fd-find
+- name: Install unzip
+  apt: name=unzip
