@@ -8,5 +8,6 @@
     recursive: yes
     update: yes
     version: master
+    force: true
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && stow --adopt . && git reset --hard 
