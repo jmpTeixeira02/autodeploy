@@ -1,3 +1,0 @@
-- name: Get Rust, btw
-  shell: "curl https://sh.rustup.rs -sSf | sh -s -- -y"
-  changed_when: false

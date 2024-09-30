@@ -30,11 +30,6 @@
         file: tasks/nvim.yml
       tags:
         - nvim
-    - name: Programming Languages
-      ansible.builtin.import_tasks:
-        file: tasks/languages.yml
-      tags:
-        - lang 
     - name: DotFiles Setup Tasks
       ansible.builtin.import_tasks:
         file: tasks/dotfiles.yml
