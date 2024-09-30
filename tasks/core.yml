@@ -6,8 +6,6 @@
   shell: gvm install go
 - name: Instal lazygit
   shell: go install github.com/jesseduffield/lazygit@latest
-- name: Install Ripgrep
-  apt: name=ripgrep
 - name: Install fd 
   apt: name=fd-find
 - name: Install unzip
