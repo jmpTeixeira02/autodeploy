@@ -40,3 +40,8 @@
         file: tasks/tmux.yml
       tags:
         - tmux
+    - name: Work
+      ansible.builtin.import_tasks:
+        file: tasks/work.yml
+      tags:
+        - work 

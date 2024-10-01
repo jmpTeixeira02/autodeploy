@@ -12,3 +12,5 @@
   apt: name=unzip
 - name: Install nvm
   apt: name=nvm
+- name: Install node
+  shell: nvm install 20
