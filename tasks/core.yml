@@ -1,3 +1,5 @@
+- name: Install Make
+  apt: name=make
 - name: Install GCC 
   apt: name=gcc
 - name: Install GVM
