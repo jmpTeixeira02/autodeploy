@@ -22,6 +22,10 @@
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
     dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting'
+- name: Install ZSH Highlights
+  ansible.builtin.git:
+    repo: 'https://github.com/marlonrichert/zsh-autocomplete.git'
+    dest: '~/.oh-my-zsh/plugins/zsh-autocomplete'
 - name: Download ZSH Starship Theme
   ansible.builtin.get_url:
     url: https://starship.rs/install.sh
