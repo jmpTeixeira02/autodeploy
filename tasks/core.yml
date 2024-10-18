@@ -12,6 +12,8 @@
   apt: name=fd-find
 - name: Install fzf
   apt: name=fzf
+- name: Install bat preview
+  apt: name=bat
 - name: Install unzip
   apt: name=unzip
 - name: Install nvm
