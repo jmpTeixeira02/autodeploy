@@ -12,8 +12,14 @@
   apt: name=fd-find
 - name: Install fzf
   apt: name=fzf
+- name: FZF Alias
+  shell: ln -s $(which fdfind) ~/.local/bin/fd
 - name: Install bat preview
   apt: name=bat
+- name: Bat Alias
+  shell: |
+    mkdir -p ~/.local/bin
+    ln -s /usr/bin/batcat ~/.local/bin/bat
 - name: Install unzip
   apt: name=unzip
 - name: Install nvm
