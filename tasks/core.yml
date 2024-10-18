@@ -1,5 +1,7 @@
 - name: Install Make
   apt: name=make
+- name: Install Bison 
+  apt: name=bison
 - name: Install GCC 
   apt: name=gcc
 - name: Install GVM
