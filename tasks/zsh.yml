@@ -22,7 +22,7 @@
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
     dest: '~/.oh-my-zsh/plugins/zsh-syntax-highlighting'
-- name: Install ZSH Highlights
+- name: Install ZSH AutoComplete
   ansible.builtin.git:
     repo: 'https://github.com/marlonrichert/zsh-autocomplete.git'
     dest: '~/.oh-my-zsh/plugins/zsh-autocomplete'

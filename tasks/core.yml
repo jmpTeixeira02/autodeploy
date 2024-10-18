@@ -15,6 +15,10 @@
   shell: go install github.com/jesseduffield/lazygit@latest
 - name: Install fd 
   apt: name=fd-find
+- name: FD Alias
+  shell: |
+    mkdir -p ~/.local/bin
+    ln -s $(which fdfind) ~/.local/bin/fd
 - name: Install fzf
   apt: name=fzf
 - name: Install bat preview
